@@ -1237,10 +1237,10 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
+		() => 0,
 		() => "rw_mine1",
 		() => 60,
 		() => 1,
-		() => 0,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "s");

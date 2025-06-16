@@ -16,11 +16,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.PlatformInfo.Cnds.IsOnChromeOS,
 		C3.Plugins.PlatformInfo.Cnds.IsOnLinux,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
+		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Eponesh_GameScore.Acts.AdsShowRewarded,
 		C3.Plugins.Eponesh_GameScore.Cnds.OnAdsRewardedReward,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.Every,
-		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetText
