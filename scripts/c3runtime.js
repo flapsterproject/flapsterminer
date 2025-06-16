@@ -1241,6 +1241,11 @@ self.C3_ExpressionFuncs = [
 		() => "rw_mine1",
 		() => 60,
 		() => 1,
+		() => 0.0000165,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "s");

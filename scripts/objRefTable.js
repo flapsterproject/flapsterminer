@@ -43,6 +43,7 @@ self.C3_JsPropNameTable = [
 	{mineinfo: 0},
 	{Touch: 0},
 	{GamePush: 0},
+	{Usdt: 0},
 	{mine_section: 0}
 ];
 
@@ -60,5 +61,6 @@ self.InstanceType = {
 	PlatformInfo: class extends self.IInstance {},
 	mineinfo: class extends self.ITextInstance {},
 	Touch: class extends self.IInstance {},
-	GamePush: class extends C3.Plugins.Eponesh_GameScore.Instance {}
+	GamePush: class extends C3.Plugins.Eponesh_GameScore.Instance {},
+	Usdt: class extends self.ITextInstance {}
 }
