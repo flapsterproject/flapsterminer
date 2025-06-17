@@ -9,6 +9,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.Touch,
 		C3.Plugins.Eponesh_GameScore,
+		C3.Behaviors.solid,
+		C3.Behaviors.Platform,
 		C3.Plugins.Browser.Cnds.OnResize,
 		C3.Plugins.PlatformInfo.Cnds.IsOnWindows,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
@@ -23,7 +25,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.Text.Acts.SetText
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.Touch.Exps.X,
+		C3.Plugins.Touch.Exps.Y,
+		C3.Plugins.Sprite.Acts.SetAngle,
+		C3.Plugins.System.Acts.Wait
 	];
 };
 self.C3_JsPropNameTable = [
@@ -44,6 +52,23 @@ self.C3_JsPropNameTable = [
 	{Touch: 0},
 	{GamePush: 0},
 	{Usdt: 0},
+	{CavePlatforms: 0},
+	{Solid: 0},
+	{CavePlatforms2: 0},
+	{SquareBlack: 0},
+	{settings_icon: 0},
+	{carriage_: 0},
+	{comingsoon: 0},
+	{sword_: 0},
+	{uiinfo: 0},
+	{mining_: 0},
+	{Sprite: 0},
+	{Platform: 0},
+	{Sprite2: 0},
+	{pick2: 0},
+	{shop_: 0},
+	{coin_icon: 0},
+	{coin: 0},
 	{mine_section: 0}
 ];
 
@@ -62,5 +87,20 @@ self.InstanceType = {
 	mineinfo: class extends self.ITextInstance {},
 	Touch: class extends self.IInstance {},
 	GamePush: class extends C3.Plugins.Eponesh_GameScore.Instance {},
-	Usdt: class extends self.ITextInstance {}
+	Usdt: class extends self.ITextInstance {},
+	CavePlatforms: class extends self.ISpriteInstance {},
+	CavePlatforms2: class extends self.ISpriteInstance {},
+	SquareBlack: class extends self.ISpriteInstance {},
+	settings_icon: class extends self.ISpriteInstance {},
+	carriage_: class extends self.ISpriteInstance {},
+	comingsoon: class extends self.ITextInstance {},
+	sword_: class extends self.ISpriteInstance {},
+	uiinfo: class extends self.ITextInstance {},
+	mining_: class extends self.ISpriteInstance {},
+	Sprite: class extends self.ISpriteInstance {},
+	Sprite2: class extends self.ISpriteInstance {},
+	pick2: class extends self.ISpriteInstance {},
+	shop_: class extends self.ISpriteInstance {},
+	coin_icon: class extends self.ISpriteInstance {},
+	coin: class extends self.ITextInstance {}
 }
