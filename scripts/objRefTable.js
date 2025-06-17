@@ -11,6 +11,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Eponesh_GameScore,
 		C3.Behaviors.solid,
 		C3.Behaviors.Platform,
+		C3.Plugins.LocalStorage,
 		C3.Plugins.Browser.Cnds.OnResize,
 		C3.Plugins.PlatformInfo.Cnds.IsOnWindows,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
@@ -31,7 +32,18 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Exps.X,
 		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetAngle,
-		C3.Plugins.System.Acts.Wait
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Text.Acts.SetFontColor,
+		C3.Plugins.LocalStorage.Acts.SetItem,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.LocalStorage.Acts.CheckItemExists,
+		C3.Plugins.LocalStorage.Cnds.OnItemExists,
+		C3.Plugins.LocalStorage.Acts.GetItem,
+		C3.Plugins.LocalStorage.Cnds.OnItemGet,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.LocalStorage.Exps.ItemValue,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.Text.Acts.Destroy
 	];
 };
 self.C3_JsPropNameTable = [
@@ -69,7 +81,17 @@ self.C3_JsPropNameTable = [
 	{shop_: 0},
 	{coin_icon: 0},
 	{coin: 0},
-	{mine_section: 0}
+	{balance_icon: 0},
+	{balance_text: 0},
+	{plus: 0},
+	{chest_icon: 0},
+	{b2: 0},
+	{LocalStorage: 0},
+	{rw_info: 0},
+	{adv: 0},
+	{mine_section: 0},
+	{manat: 0},
+	{click: 0}
 ];
 
 self.InstanceType = {
@@ -102,5 +124,13 @@ self.InstanceType = {
 	pick2: class extends self.ISpriteInstance {},
 	shop_: class extends self.ISpriteInstance {},
 	coin_icon: class extends self.ISpriteInstance {},
-	coin: class extends self.ITextInstance {}
+	coin: class extends self.ITextInstance {},
+	balance_icon: class extends self.ISpriteInstance {},
+	balance_text: class extends self.ITextInstance {},
+	plus: class extends self.ISpriteInstance {},
+	chest_icon: class extends self.ISpriteInstance {},
+	b2: class extends self.ISpriteInstance {},
+	LocalStorage: class extends self.IInstance {},
+	rw_info: class extends self.ITextInstance {},
+	adv: class extends self.ISpriteInstance {}
 }
