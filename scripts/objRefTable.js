@@ -12,6 +12,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.solid,
 		C3.Behaviors.Platform,
 		C3.Plugins.LocalStorage,
+		C3.Plugins.Photon,
 		C3.Plugins.Browser.Cnds.OnResize,
 		C3.Plugins.PlatformInfo.Cnds.IsOnWindows,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
@@ -43,7 +44,32 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.Text.Acts.Destroy
+		C3.Plugins.Text.Acts.Destroy,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Photon.Acts.connect,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.Photon.Acts.createRoom,
+		C3.Plugins.System.Exps.int,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Photon.Acts.requestLobbyStats,
+		C3.Plugins.Photon.Acts.joinRoom,
+		C3.Plugins.Photon.Exps.RoomNameAt,
+		C3.Plugins.Photon.Cnds.onLobbyStats,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Photon.Exps.RoomCount,
+		C3.Plugins.System.Cnds.For,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Text.Exps.Height,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.Photon.Exps.RoomIsOpen,
+		C3.Plugins.Photon.Exps.RoomPlayerCount,
+		C3.Plugins.Photon.Exps.RoomMaxPlayers,
+		C3.Plugins.Text.Acts.SetInstanceVar,
+		C3.Plugins.Photon.Cnds.onJoinRoom,
+		C3.Plugins.Photon.Acts.setMyRoomMaxPlayers,
+		C3.Plugins.Photon.Exps.StateString,
+		C3.Plugins.Photon.Exps.MyRoomName,
+		C3.Plugins.Photon.Acts.setMyRoomIsOpen
 	];
 };
 self.C3_JsPropNameTable = [
@@ -85,13 +111,24 @@ self.C3_JsPropNameTable = [
 	{balance_text: 0},
 	{plus: 0},
 	{chest_icon: 0},
-	{b2: 0},
+	{rw_x2button: 0},
 	{LocalStorage: 0},
 	{rw_info: 0},
 	{adv: 0},
+	{create_room: 0},
+	{Photon: 0},
+	{reload: 0},
+	{play: 0},
+	{lobby_infos: 0},
+	{id_room: 0},
+	{photon_roominfo: 0},
+	{slot: 0},
+	{photonlog: 0},
 	{mine_section: 0},
 	{manat: 0},
-	{click: 0}
+	{click: 0},
+	{my_photon_nr: 0},
+	{photon_status: 0}
 ];
 
 self.InstanceType = {
@@ -129,8 +166,16 @@ self.InstanceType = {
 	balance_text: class extends self.ITextInstance {},
 	plus: class extends self.ISpriteInstance {},
 	chest_icon: class extends self.ISpriteInstance {},
-	b2: class extends self.ISpriteInstance {},
+	rw_x2button: class extends self.ISpriteInstance {},
 	LocalStorage: class extends self.IInstance {},
 	rw_info: class extends self.ITextInstance {},
-	adv: class extends self.ISpriteInstance {}
+	adv: class extends self.ISpriteInstance {},
+	create_room: class extends self.ISpriteInstance {},
+	Photon: class extends self.IInstance {},
+	reload: class extends self.ISpriteInstance {},
+	play: class extends self.ISpriteInstance {},
+	lobby_infos: class extends self.ITextInstance {},
+	photon_roominfo: class extends self.ITextInstance {},
+	slot: class extends self.ISpriteInstance {},
+	photonlog: class extends self.ITextInstance {}
 }
