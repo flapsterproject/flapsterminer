@@ -1393,7 +1393,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 0.2,
 		() => "parent_id",
-		() => 740870258,
 		() => "ref1",
 		() => "Save Local",
 		() => "selected",
