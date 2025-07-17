@@ -1393,6 +1393,8 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 0.2,
 		() => "parent_id",
+		() => 740870258,
+		() => "ref1",
 		() => "Save Local",
 		() => "selected",
 		p => {
@@ -1505,6 +1507,7 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpInstVar() - n1.ExpInstVar());
 		},
 		() => "Not available!",
+		() => 0.5,
 		() => "Subscribe",
 		() => "Join",
 		() => "https://t.me/FlapsterMiner",
@@ -1545,7 +1548,8 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Your referrals: ", v0.GetValue());
-		}
+		},
+		() => "referral_level1"
 ];
 
 

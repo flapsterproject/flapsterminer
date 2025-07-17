@@ -64,7 +64,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.JavaScriptInEvents.Main_Event2_Act3,
 		C3.JavaScriptInEvents.Main_Event3_Act1,
 		C3.Plugins.System.Cnds.Compare,
-		C3.JavaScriptInEvents.Main_Event4_Act4,
+		C3.Plugins.GamePush_Channels.Acts.SendFeedMessage,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.LocalStorage.Acts.SetItem,
 		C3.Plugins.LocalStorage.Acts.CheckItemExists,
@@ -137,9 +137,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.GamePush_Channels.Exps.CurPlayerAvatar,
 		C3.Plugins.GamePush_Channels.Cnds.OnEventJoin,
 		C3.JavaScriptInEvents.Referral_Event2_Act1,
-		C3.JavaScriptInEvents.Referral_Event3_Act1,
-		C3.JavaScriptInEvents.Referral_Event4,
-		C3.JavaScriptInEvents.Referral_Event5
+		C3.Plugins.GamePush_Channels.Acts.FetchFeedMessages,
+		C3.Plugins.GamePush_Channels.Cnds.OnFeedMessagesFetch,
+		C3.Plugins.GamePush_Channels.Cnds.EachCurMessageTag,
+		C3.Plugins.GamePush_Channels.Acts.DeleteMessage
 	];
 };
 self.C3_JsPropNameTable = [
