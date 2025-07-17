@@ -19,7 +19,7 @@ runtime.globalVars.ref_link = fullUrl;
 	{
 		gp.channels.sendFeedMessage({
 		   playerId: parent_candidate,
-		   text: JSON.stringify({id:5}),
+		   text: JSON.stringify({id:1}),
 		   tags: ["gift"]
 		});
 	},
