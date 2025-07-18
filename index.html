@@ -28,22 +28,21 @@ if (location.protocol.substr(0, 4) === "file")
 {
 	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
 }
-</script>
-	 <!-- Telegram Mini App fullscreen request -->
-    <script type="module">
-      import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.js';
+</script> 
 
-      async function initTg() {
-        if (expandViewport.isAvailable()) {
-          await expandViewport();
-        }
-        if (requestFullscreen.isAvailable()) {
-          await requestFullscreen();
-        }
-      }
+	 <button id="tg-fullscreen-btn">Go Fullscreen</button>
+<script type="module">
+  import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.mjs';
 
-      initTg();
-    </script>
+  document.getElementById('tg-fullscreen-btn').onclick = async () => {
+    if (expandViewport.isAvailable()) {
+      await expandViewport();
+    }
+    if (requestFullscreen.isAvailable()) {
+      await requestFullscreen();
+    }
+  };
+</script> 
 	<noscript>
 		<div id="notSupportedWrap">
 			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
