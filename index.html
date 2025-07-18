@@ -32,7 +32,9 @@ if (location.protocol.substr(0, 4) === "file")
 
 	 <button id="tg-fullscreen-btn">Go Fullscreen</button>
 <script type="module">
-  import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.mjs';
+  import WebApp, { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.mjs';
+
+  WebApp.ready(); // Notify Telegram that your app is ready
 
   document.getElementById('tg-fullscreen-btn').onclick = async () => {
     if (expandViewport.isAvailable()) {
@@ -42,7 +44,7 @@ if (location.protocol.substr(0, 4) === "file")
       await requestFullscreen();
     }
   };
-</script> 
+</script>
 	<noscript>
 		<div id="notSupportedWrap">
 			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
