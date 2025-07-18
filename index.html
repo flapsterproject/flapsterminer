@@ -21,20 +21,7 @@
  
 <body>
   
-	<script>
-		import { expandViewport, requestFullscreen } from '@telegram-apps/sdk';
-
-async function initTg() {
-  if (expandViewport.isAvailable()) {
-    await expandViewport();
-  }
-  if (requestFullscreen.isAvailable()) {
-    await requestFullscreen();
-  }
-}
-
-   initTg();
-	</script>
+	
 
 <script>
 if (location.protocol.substr(0, 4) === "file")
@@ -42,7 +29,21 @@ if (location.protocol.substr(0, 4) === "file")
 	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
 }
 </script>
-	
+	 <!-- Telegram Mini App fullscreen request -->
+    <script type="module">
+      import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.mjs';
+
+      async function initTg() {
+        if (expandViewport.isAvailable()) {
+          await expandViewport();
+        }
+        if (requestFullscreen.isAvailable()) {
+          await requestFullscreen();
+        }
+      }
+
+      initTg();
+    </script>
 	<noscript>
 		<div id="notSupportedWrap">
 			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
