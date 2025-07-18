@@ -106,6 +106,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.IsInTouch,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.System.Cnds.OnLoadFinished,
+		C3.JavaScriptInEvents.Loading_Event1_Act1,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Text.Acts.Destroy,
 		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardFetchScoped,
