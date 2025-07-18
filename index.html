@@ -20,7 +20,7 @@
 </head> 
  
 <body>
-  
+
 	
 
 <script>
@@ -28,23 +28,8 @@ if (location.protocol.substr(0, 4) === "file")
 {
 	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
 }
-</script> 
-
-	 <button id="tg-fullscreen-btn">Go Fullscreen</button>
-<script type="module">
-  import WebApp, { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.js';
-
-  WebApp.ready(); // Notify Telegram that your app is ready
-
-  document.getElementById('tg-fullscreen-btn').onclick = async () => {
-    if (expandViewport.isAvailable()) {
-      await expandViewport();
-    }
-    if (requestFullscreen.isAvailable()) {
-      await requestFullscreen();
-    }
-  };
 </script>
+	
 	<noscript>
 		<div id="notSupportedWrap">
 			<h2 id="notSupportedTitle">This content requires JavaScript</h2>

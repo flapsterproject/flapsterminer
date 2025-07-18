@@ -1391,6 +1391,18 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("referral_level1");
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_level2");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_level3");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_earnusdt");
+		},
 		() => 0.2,
 		() => "parent_id",
 		() => "ref1",
@@ -1520,7 +1532,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (530 + (80 * f0()));
 		},
-		() => 115,
+		() => 125,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (490 + (80 * f0()));
@@ -1529,7 +1541,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
 			const f2 = p._GetNode(2).GetBoundMethod();
-			return () => and(((((and(" #", f0()) + "     ") + f1()) + "\n") + "          "), f2("coin"));
+			return () => and(((((and(" #", f0()) + "       ") + f1()) + "\n") + "            "), f2("coin"));
 		},
 		() => "PVP",
 		p => {
@@ -1546,13 +1558,36 @@ self.C3_ExpressionFuncs = [
 		() => "maxHp",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => and("Your referrals: ", v0.GetValue());
+			return () => (and(("You earned from referrals:" + "\n"), v0.GetValue()) + " USDT");
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => and((((and((((and(((("Your referrals: " + "\n") + "\n") + "Level1: "), v0.GetValue()) + "\n") + "\n") + "Level2: "), v1.GetValue()) + "\n") + "\n") + "Level3: "), v2.GetValue());
+		},
+		() => "ref2",
+		() => "ref3",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() + 1);
 		},
-		() => "referral_level1"
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 0.0005);
+		},
+		() => "referral_earnusdt",
+		() => "referral_level1",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 0.0003);
+		},
+		() => "referral_level2",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 0.0002);
+		},
+		() => "referral_level3"
 ];
 
 

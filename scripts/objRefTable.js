@@ -302,12 +302,16 @@ self.C3_JsPropNameTable = [
 	{Referrallink_text: 0},
 	{referralcount_text: 0},
 	{HTMLElement: 0},
+	{referralinfoincometext: 0},
+	{earnedfromreferrals: 0},
 	{mine_section: 0},
 	{click: 0},
 	{x2_timer: 0},
 	{coin_backendtime: 0},
 	{coin_backend: 0},
 	{Referral_level1: 0},
+	{Referral_level2: 0},
+	{Referral_level3: 0},
 	{item1_bought: 0},
 	{item2_bought: 0},
 	{item3_bought: 0},
@@ -323,7 +327,8 @@ self.C3_JsPropNameTable = [
 	{player_id: 0},
 	{ref_link: 0},
 	{parent_candidate: 0},
-	{plyid: 0}
+	{plyid: 0},
+	{referral_earnusdt: 0}
 ];
 
 self.InstanceType = {
@@ -467,5 +472,7 @@ self.InstanceType = {
 	textbox3: class extends self.ISpriteInstance {},
 	Referrallink_text: class extends self.ITextInstance {},
 	referralcount_text: class extends self.ITextInstance {},
-	HTMLElement: class extends self.IHTMLElementInstance {}
+	HTMLElement: class extends self.IHTMLElementInstance {},
+	referralinfoincometext: class extends self.ITextInstance {},
+	earnedfromreferrals: class extends self.ITextInstance {}
 }
