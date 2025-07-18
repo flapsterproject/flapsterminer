@@ -31,7 +31,7 @@ if (location.protocol.substr(0, 4) === "file")
 </script>
 	 <!-- Telegram Mini App fullscreen request -->
     <script type="module">
-      import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.mjs';
+      import { expandViewport, requestFullscreen } from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@latest/dist/index.js';
 
       async function initTg() {
         if (expandViewport.isAvailable()) {
