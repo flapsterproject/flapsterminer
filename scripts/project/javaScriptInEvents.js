@@ -22,11 +22,6 @@ const fullUrl = `https://t.me/FlapsterMiner_bot?startapp=${playerId}`;
 const messageText = `Привет! Вступай в мою команду! Давай играть и зарабатывать вместе!`;
 const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(messageText)}`;
 window.open(shareUrl, "_blank");
-	},
-
-	async Loading_Event1_Act1(runtime, localVars)
-	{
-		toggleFullscreen();
 	}
 };
 
