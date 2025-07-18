@@ -139,8 +139,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.JavaScriptInEvents.Referral_Event2_Act1,
 		C3.Plugins.GamePush_Channels.Acts.FetchFeedMessages,
 		C3.Plugins.GamePush_Channels.Cnds.OnFeedMessagesFetch,
-		C3.Plugins.GamePush_Channels.Cnds.EachCurMessageTag,
-		C3.Plugins.GamePush_Channels.Acts.DeleteMessage
+		C3.Plugins.GamePush_Channels.Cnds.EachMessage,
+		C3.Plugins.GamePush_Channels.Acts.DeleteMessage,
+		C3.Plugins.GamePush_Channels.Exps.CurMessageID
 	];
 };
 self.C3_JsPropNameTable = [
@@ -321,7 +322,8 @@ self.C3_JsPropNameTable = [
 	{ChannelId: 0},
 	{player_id: 0},
 	{ref_link: 0},
-	{parent_candidate: 0}
+	{parent_candidate: 0},
+	{plyid: 0}
 ];
 
 self.InstanceType = {

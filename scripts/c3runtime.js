@@ -1385,11 +1385,11 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("referral_level1");
+			return () => f0("id");
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("id");
+			return () => f0("referral_level1");
 		},
 		() => 0.2,
 		() => "parent_id",
@@ -1547,6 +1547,10 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Your referrals: ", v0.GetValue());
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 1);
 		},
 		() => "referral_level1"
 ];
