@@ -4,3 +4,4 @@ import "./plugins/EMI_INDO_LogMessage/c3runtime/main.js";
 import "./plugins/GamePush_Channels/c3runtime/main.js";
 import "./objRefTable.js";
 import "./project/javaScriptInEvents.js";
+import { exitFullscreen, requestFullscreen, isFullscreen } from '@telegram-apps/sdk';

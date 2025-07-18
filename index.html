@@ -22,7 +22,6 @@
 <body>
 
 	
-
 <script>
 if (location.protocol.substr(0, 4) === "file")
 {
@@ -41,6 +40,30 @@ if (location.protocol.substr(0, 4) === "file")
 	<script src="scripts/offlineclient.js" type="module"></script>
 	<script src="scripts/main.js" type="module"></script>
 	<script src="scripts/register-sw.js" type="module"></script>
+  
+	<script>async function toggleFullscreen() {
 
+if (requestFullscreen.isAvailable()) {
+
+await requestFullscreen();
+
+console.log("Fullscreen requested", isFullscreen()); // True
+
+}
+
+}
+
+async function exitFullscreenMode() {
+
+if (exitFullscreen.isAvailable()) {
+
+await exitFullscreen();
+
+console.log("Fullscreen exited", isFullscreen()); // False
+
+}
+
+}
+</script>
 </body> 
 </html>
