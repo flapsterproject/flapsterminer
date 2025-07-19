@@ -1404,6 +1404,11 @@ self.C3_ExpressionFuncs = [
 			return () => f0("referral_earnusdt");
 		},
 		() => 0.2,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("check_if_registered");
+		},
+		() => "check_if_registered",
 		() => "parent_id",
 		() => "ref1",
 		() => "Save Local",
