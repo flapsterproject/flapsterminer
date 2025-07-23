@@ -1310,20 +1310,21 @@ self.C3_ExpressionFuncs = [
 		() => "Mining isn't available!",
 		() => "red",
 		() => 5000,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("coin");
+		},
 		() => 10000,
 		() => 40,
-		() => 60,
 		() => "coin",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
-		() => "usdt",
+		() => -10000,
+		() => 60,
 		() => "Not enough money!",
 		() => "Mining started⛏️",
 		() => "green",
 		() => 2000,
 		() => 1,
+		() => "usdt",
 		() => 0.00000275,
 		() => 0.000004125,
 		() => 2,
@@ -1333,16 +1334,16 @@ self.C3_ExpressionFuncs = [
 		() => 4,
 		() => 0.00001,
 		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("usdt");
+		},
+		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "s");
 		},
 		() => "Start mining!",
 		() => " 10k",
 		() => 5,
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("coin");
-		},
 		() => "Soon!",
 		() => "orange",
 		() => 1000,
@@ -1353,60 +1354,16 @@ self.C3_ExpressionFuncs = [
 		() => 54783,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("usdt");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("task1_status");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("task2_status");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("golden-pickaxe");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("crimson-pickaxe");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("emerald-pickaxe");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("diamond-pickaxe");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("parent_id");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("id");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("referral_level1");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("referral_level2");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("referral_level3");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("referral_earnusdt");
 		},
 		() => 0.2,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("check_if_registered");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
 		},
 		() => "check_if_registered",
 		() => "parent_id",
@@ -1420,12 +1377,12 @@ self.C3_ExpressionFuncs = [
 		() => "Bottom_menu",
 		() => 1000000,
 		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and((v0.GetValue() / 1000), "k");
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => and(divide(f0("coin"), 1000), "k");
 		},
 		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and((v0.GetValue() / 1000000), "mln");
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => and(divide(f0("coin"), 1000000), "mln");
 		},
 		() => "idle",
 		() => "reward_x2",
@@ -1524,14 +1481,65 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "Not available!",
 		() => 0.5,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("task1_status");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("task2_status");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("golden-pickaxe");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("crimson-pickaxe");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("emerald-pickaxe");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("diamond-pickaxe");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("parent_id");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_level1");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_level2");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_level3");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("referral_earnusdt");
+		},
 		() => "Subscribe",
 		() => "Join",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("task3_status");
+		},
+		() => "Play",
 		() => "https://t.me/FlapsterMiner",
 		() => "Checking...",
 		() => "task1_status",
 		() => "https://t.me/FlapsterMinerChat",
 		() => "task2_status",
-		() => "10k",
+		() => "https://t.me/TON_DRIVE_OFFICIAL_bot?startapp=745399310",
+		() => "task3_status",
+		() => "+10k",
 		() => "Done",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();

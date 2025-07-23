@@ -15,15 +15,6 @@ const fullUrl = `https://t.me/FlapsterMiner_bot?startapp=${playerId}`;
 runtime.globalVars.ref_link = fullUrl;
 	},
 
-	async Referral_Event2_Act1(runtime, localVars)
-	{
-const playerId = runtime.globalVars.player_id;
-const fullUrl = `https://t.me/FlapsterMiner_bot?startapp=${playerId}`;
-const messageText = `Привет! Вступай в мою команду! Давай играть и зарабатывать вместе!`;
-const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(messageText)}`;
-window.open(shareUrl, "_blank");
-	},
-
 	async Main_Event4_Act1(runtime, localVars)
 	{
 		// 1. Через start_param
@@ -39,6 +30,15 @@ window.open(shareUrl, "_blank");
 		  }
 		}
 		
+	},
+
+	async Referral_Event2_Act1(runtime, localVars)
+	{
+const playerId = runtime.globalVars.player_id;
+const fullUrl = `https://t.me/FlapsterMiner_bot?startapp=${playerId}`;
+const messageText = `Привет! Вступай в мою команду! Давай играть и зарабатывать вместе!`;
+const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(messageText)}`;
+window.open(shareUrl, "_blank");
 	}
 };
 
