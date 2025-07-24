@@ -1552,23 +1552,17 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const f2 = p._GetNode(2).GetBoundMethod();
-			return () => and(((((and(" #", f0()) + "       ") + f1()) + "\n") + "            "), f2("coin"));
-		},
-		() => "PVP",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject(0);
+			return () => (515 + (80 * f0()));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("data");
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => ((and(" #", f0()) + "       ") + f1());
 		},
-		() => "name",
-		() => "avatar",
-		() => "hp",
-		() => "maxHp",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => and("            ", f0("coin"));
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (and(("You earned from referrals:" + "\n"), v0.GetValue()) + " USDT");
